@@ -1,0 +1,5 @@
+rootProject.name = 'dubbo-spring-version'
+include 'consumer'
+include 'interface'
+include 'producer'
+

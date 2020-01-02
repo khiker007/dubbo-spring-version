@@ -1,0 +1,23 @@
+server:
+  port: 8092
+  undertow:
+    buffer-size: 1024
+    direct-buffers: true
+spring:
+  application:
+    name: api-core
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+dubbo:
+  application:
+    qos-enable: false
+  cloud:
+    subscribed-services: producer-1
+  consumer:
+    group: test-2
+    version: 1.0.1

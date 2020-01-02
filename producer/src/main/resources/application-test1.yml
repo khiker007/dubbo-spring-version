@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: producer-1
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+dubbo:
+  scan:
+    base-packages: com.fshares.chain.service.impl
+  protocol:
+    name: dubbo
+    port: -1
+    status: server
+    serialization: kryo
+    heartbeat: 5000
+    keep-alive: true
+  application:
+    qosEnable: false
+  provider:
+    delay: -1
+    retries: 0
+    timeout: 10000
+    payload: 16777216
+    group: test-1
+    version: 1.0.0
+  cloud:
+    subscribed-services: ""

@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+dependencies {
+    compile project(":interface")
+    compile "com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"
+    compile "com.alibaba.cloud:spring-cloud-starter-dubbo"
+    compile "org.apache.dubbo:dubbo-serialization-kryo"
+    compile "com.alibaba.nacos:nacos-client"
+    compile "org.springframework.boot:spring-boot-starter-web"
+}
+
